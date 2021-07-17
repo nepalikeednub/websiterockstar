@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>SIGN IN</title>
+	<link rel="stylesheet" type="text/css" href="style-signup.css">
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+	<body>
+		<div class="row">
+			<div class="logo">
+				<img src="logo.png">
+			<ul class="main-nav">
+			<li><a href="home.html"> HOME </a></li>
+			<li><a href="game.html"> GAMES </a></li>
+			<li><a href="video.html"> VIDEOS </a></li>
+			<li><a href="image.html"> GALLERY </a></li>
+			<li><a href="signup.html"> SIGN UP </a></li>
+		</ul>
+
+		</div>
+	<div class="login-page">
+	 <div class="form">
+		<form class="register">
+			<input type="text" placeholder="USERNAME"/>
+			<input type="text" placeholder="PASSWORD"/>
+			<input type="text" placeholder="EMAIL ID"/>
+			<button>create</button>
+			<p class="message">Already Registered? <a href="#">Login</a>
+			</p>
+		</form>
+	
+		<form class="login-form">
+			<input type="text" placeholder="USERNAME"/>
+			<input type="password" placeholder="PASSWORD"/>
+			<button>login</button>
+			<p class="message">Not Registered? <a href="#">Register</a></p>
+	</form>
+     </div>
+	 </div>
+
+	 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+
+	 <script>
+	 	$('.message a').click(function(){
+	 	$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+	    });
+	</script>
+	<div id="footer">
+<p>&copy;&nbsp&nbspREGAN-ROCKSTAR GAMES
+</div>
+ 
+</body>
+</html>

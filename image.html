@@ -1,0 +1,100 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="image.css">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="row">
+			<div class="logo">
+				<img src="logo.png">
+			<ul class="main-nav">
+			<li><a href="home.html"> HOME </a></li>
+			<li><a href="game.html"> GAMES </a></li>
+			<li><a href="video.html"> VIDEOS </a></li>
+			<li><a href="image.html"> GALLERY </a></li>
+			<li><a href="signup.html"> SIGN UP </a></li>
+		</ul>
+
+		</div>
+	<div class="overlay" id="overlay">
+	<div class="next" id="next">
+		<img src="Images/next.png" height="10%">
+	</div>
+	<div class="before" id="before">
+		<img src="Images/prev.png" height="10%">
+	</div>
+	<div class="img-wrap">
+		<img src="Images/1.jpg" height="100%" id="overlay-img">
+	</div>
+	<div class="close" onclick="imgDisappear()">
+		<img src="Images/close.png" height="10%">
+	</div>
+</div>
+	<div class="text middle">
+      <span>R</span>
+      <span class="hidden">O</span>
+      <span class="hidden">C</span>
+      <span class="hidden">K</span>
+      <span class="hidden">S</span>
+      <span class="hidden">T</span>
+      <span class="hidden">A</span>
+      <span class="hidden">R</span>
+      <span class="hidden">-</span>
+      <span class="hidden">G</span>
+      <span class="hidden">A</span>
+      <span class="hidden">L</span>
+      <span class="hidden">L</span>
+      <span class="hidden">E</span>
+      <span class="hidden">R</span>
+     
+      <span>Y</span>
+     
+    </div>
+
+
+
+<div class="gallery">
+	<img src="Images/1small.jpg" onclick="imgAppear(0)">
+	<img src="Images/2small.jpg" onclick="imgAppear(1)">
+	<img src="Images/3small.jpg" onclick="imgAppear(2)">
+	<img src="Images/4small.jpg" onclick="imgAppear(3)">
+	<img src="Images/5small.jpg" onclick="imgAppear(4)">
+	<img src="Images/6small.jpg" onclick="imgAppear(5)">
+	<img src="Images/7small.jpg" onclick="imgAppear(6)">
+
+</div>
+<div id="footer">
+<p>&copy;&nbsp&nbspREGAN-ROCKSTAR GAMES
+</div>
+<script type="text/javascript">
+	var pic=["Images/1small.jpg","Images/2small.jpg","Images/3small.jpg","Images/4small.jpg","Images/5small.jpg","Images/6small.jpg","Images/7small.jpg"];
+
+	function imgAppear(i){
+		var imgNo=i;
+		document.getElementById("overlay").classList.add("appear");
+		document.getElementById("overlay-img").src=pic[imgNo];
+		document.getElementById("next").onclick=function(){
+			imgNo++;
+			if(imgNo>6){imgNo=0;}
+			this.src=pic[imgNo];
+			document.getElementById("overlay-img").src=pic[imgNo];
+		}
+		document.getElementById("before").onclick=function(){
+			imgNo--;
+			if(imgNo<0){imgNo=6;}
+			this.src=pic[imgNo];
+			document.getElementById("overlay-img").src=pic[imgNo];
+		}
+	}
+
+	function imgDisappear(){
+		document.getElementById("overlay").classList.remove("appear");
+	}
+</script>
+	
+
+
+</body>
+</html>
